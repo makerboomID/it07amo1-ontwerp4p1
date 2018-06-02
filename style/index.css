@@ -338,22 +338,21 @@ article > section + section {
         border-left: 0;
     }
 
+    article > header > * {
+        padding: 0;
+    }
+
     article > header > .title {
         margin: 0 0 2em 0;
-        padding: 0;
         text-align: center;
     }
 
     article > header > .meta {
         align-items: center;
-        display: -moz-flex;
-        display: -webkit-flex;
-        display: -ms-flex;
         display: flex;
         justify-content: center;
         border-left: 0;
         margin: 0 0 2em 0;
-        padding: 0;
         text-align: left;
         width: 100%;
     }
@@ -362,6 +361,12 @@ article > section + section {
         border-left: solid 1px rgba(160, 160, 160, 0.3);
         margin-left: 2em;
         padding-left: 2em;
+    }
+
+    article > header > .meta > img {
+        max-height: 10em;
+        height: 100%;
+        width: auto;
     }
 
     article > header > .meta > :first-child {
@@ -387,6 +392,10 @@ article > section + section {
         margin: -1.5em 0 1.5em 0;
         width: calc(100% + 3em);
     }
+    
+    article > header > .meta > img {
+        max-height: 5em;
+    }
 
     article > header > .title h2 {
         font-size: 1.1em;
@@ -407,6 +416,10 @@ article > section + section {
         padding-left: 0;
     }
 
+    article > header > .meta > img {
+        display: none;
+
+    }
     article > footer {
         align-items: stretch;
         flex-direction: column-reverse;
