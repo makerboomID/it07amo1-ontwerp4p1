@@ -66,9 +66,6 @@ body, input, select, textarea {
 }
 
 a {
-    -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-    -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-    -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
     transition: color 0.2s ease, border-bottom-color 0.2s ease;
     border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
     color: inherit;
@@ -76,9 +73,6 @@ a {
 }
 
 a:before {
-    -moz-transition: color 0.2s ease;
-    -webkit-transition: color 0.2s ease;
-    -ms-transition: color 0.2s ease;
     transition: color 0.2s ease;
 }
 
@@ -340,7 +334,7 @@ article > section + section {
 
     article > header {
         flex-direction: column;
-        padding: 3.75em 3em 1.25em 3em ;
+        padding: 3.75em 3em 1.25em 3em;
         border-left: 0;
     }
 
@@ -381,20 +375,20 @@ article > section + section {
 @media screen and (max-width: 736px) {
 
     article {
-        padding: 1.5em 1.5em 0.1em 1.5em ;
+        padding: 1.5em 1.5em 0.1em 1.5em;
         left: -1.5em;
         margin: 0 0 2em 0;
         width: calc(100% + (1.5em * 2));
     }
 
     article > header {
-        padding: 3em 1.5em 0.5em 1.5em ;
+        padding: 3em 1.5em 0.5em 1.5em;
         left: -1.5em;
         margin: -1.5em 0 1.5em 0;
         width: calc(100% + 3em);
     }
 
-    article > header >  .title h2 {
+    article > header > .title h2 {
         font-size: 1.1em;
     }
 
@@ -417,7 +411,6 @@ article > section + section {
         align-items: stretch;
         flex-direction: column-reverse;
     }
-
 
 }
 
