@@ -67,20 +67,78 @@
                         <li>Maak een nieuwe branch: <strong>feature/afbeeldingen</strong></li>
                         <li>Controleer dat je in deze branch zit</li>
                         <li>
-                            Zoek een passende afbeelding voor het introductie hoofdstuk,
-                            voeg deze afbeelding toe in de map <em>images</em> en maak een commit.
-                            <a href="https://www.google.com/search?q=introduction&tbm=isch&&tbs=ic:trans,sur:fmc,itp:clipart">zoeken</a>
+                            Herhaal de volgende stappen voor iedere hoofdstuk.
+                            <ul>
+                                <li>
+                                    Zoek een passende afbeelding voor het hoofdstuk,
+                                    voeg deze afbeelding toe in de map <em>images</em> en maak een commit.
+                                    <a href="https://www.google.com/search?q=introduction&tbm=isch&&tbs=ic:trans,sur:fmc,itp:clipart">zoeken</a>
+                                </li>
+                                <li>
+                                    Pas de src aan van de placeholder afbeelding van het introductie hoofdstuk aan,
+                                    zodat de nieuw toegevoegde afbeelding zichtbaar is en maak een commit.
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            Pas de src aan van de placeholder afbeelding van het introductie hoofdstuk aan,
-                            zodat de nieuw toegevoegde afbeelding zichtbaar is en maak een commit.
-                        </li>
-                        <li>
-                            Herhaal deze stappen voor de overige hoofdstukken.
-                        </li>
+                        <li>Ga terug naar de <strong>develop</strong> branch.</li>
+                        <li><em>Merge</em> de aanpassingen van <strong>feature/afbeeldigen</strong> naar <strong>develop</strong>.</li>
+                        <li>Push de <strong>develop</strong> branch naar github</li>
                     </ul>
                 </section>
             </article>
+
+
+            <article id="conflict">
+                <header>
+                    <section class="title">
+                        <h2>Een conflict oplossen</h2>
+                        <p>
+                            Winnaar:
+                            <span id="winnaar">Onbekend</span>
+                        </p>
+                    </section>
+                    <section class="meta">
+                        <img src="images/placeholder.jpg">
+                    </section>
+                </header>
+
+                <section>
+                    <h3>Opdracht</h3>
+                    <ul>
+                        <li>Begin een nieuwe feature branch: <strong>feature/chuck</strong></li>
+                        <li>Pas de hierboven aangegeven winnaar aan naar: <em>Chuck Norris</em></li>
+                        <li>Commit deze wijziging.</li>
+                    </ul>
+                    <ul>
+                        <li>Ga terug naar de <strong>develop</strong> branch</li>
+                        <li>Begin een nieuwe feature branch: <strong>feature/superman</strong></li>
+                        <li>Pas de hierboven aangegeven winnaar aan naar: <em>Superman</em></li>
+                        <li>Commit deze wijziging.</li>
+                    </ul>
+                    <ul>
+                        <li>Ga terug naar de <strong>develop</strong> branch</li>
+                        <li><em>Merge</em> de aanpassingen van <strong>feature/superman</strong> naar <strong>develop</strong>.</li>
+                        <li>Controleer of superman de winnaar is.</li>
+                        <li><em>Merge</em> de aanpassingen van <strong>feature/chuck</strong> naar <strong>develop</strong>.</li>
+                        <li>
+                            <strong>Conflict!</strong>
+                            <pre><code>
+                                <<<<<<< HEAD
+                                &lt;span id="winnaar"&gt;Superman&lt;/span&gt;
+                                =======
+                                &lt;span id="winnaar"&gt;Chuck&lt;/span&gt;
+                                >>>>>>> feature/chuck
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Zorg dat <em>Chuck</em> de winnaar is.</li>
+                        <li>Commit de merge</li>
+                        <li>Push de <strong>develop</strong> branch naar github</li>
+                    </ul>
+                </section>
+            </article>
+
+
         </main>
 
         <footer>
