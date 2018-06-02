@@ -9,6 +9,7 @@
 
         <header id="header">
             <h1 id="page-title">Ontwerp 4 - Git-flow</h1>
+            <p id="version">1</p>
         </header>
 
         <main id="main">
@@ -19,12 +20,12 @@
 
             <article id="introductie">
                 <header>
-                    <section class="title">
+                    <div class="title">
                         <h2>Introductie</h2>
-                    </section>
-                    <section class="meta">
+                    </div>
+                    <div class="meta">
                         <img src="images/placeholder.jpg">
-                    </section>
+                    </div>
                 </header>
                 <section>
                     <h3>Doelstelling</h3>
@@ -54,12 +55,12 @@
 
             <article id="afbeeldingen">
                 <header>
-                    <section class="title">
+                    <div class="title">
                         <h2>Afbeeldingen toevoegen</h2>
-                    </section>
-                    <section class="meta">
+                    </div>
+                    <div class="meta">
                         <img src="images/placeholder.jpg">
-                    </section>
+                    </div>
                 </header>
                 <section>
                     <h3>Opdracht</h3>
@@ -96,16 +97,16 @@
 
             <article id="conflict">
                 <header>
-                    <section class="title">
+                    <div class="title">
                         <h2>Een conflict oplossen</h2>
                         <p>
                             Winnaar:
                             <span id="winnaar">Onbekend</span>
                         </p>
-                    </section>
-                    <section class="meta">
+                    </div>
+                    <div class="meta">
                         <img src="images/placeholder.jpg">
-                    </section>
+                    </div>
                 </header>
 
                 <section>
@@ -127,7 +128,8 @@
                     <h3>Fight!</h3>
                     <ul>
                         <li>Ga terug naar de <strong>develop</strong> branch</li>
-                        <li><em>Merge</em> de aanpassingen van <strong>feature/superman</strong> naar
+                        <li>
+                            <em>Merge</em> de aanpassingen van <strong>feature/superman</strong> naar
                             <strong>develop</strong>.
                         </li>
                         <li>Controleer of superman de winnaar is.</li>
@@ -150,6 +152,44 @@
                         <li>Push de <strong>develop</strong> branch naar github</li>
                     </ul>
                 </section>
+            </article>
+
+            <article>
+                <header>
+                    <div class="title">
+                        <h2>Release</h2>
+                    </div>
+                    <div class="meta">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </header>
+                <section>
+                    <ul>
+                        <li>Ga naar de <strong>master</strong> branch.</li>
+                        <li>
+                            Boven aan de <em>index.html</em>, zie je de laatse <a href="#version">versie</a>,
+                            jouw <em>{versie}</em> is 1 cijfer hoger.
+                        </li>
+                        <li>Start een nieuwe release branch: <strong>release/{versie}</strong></li>
+                        <li>Pas de versie aan in de <em>index.html</em></li>
+                        <li>Commit deze aanpassing</li>
+                        <li>Ga naar de <strong>develop</strong> branch</li>
+                        <li>
+                            <em>Merge</em> de aanpassingen van
+                            <strong>release/{versie}</strong> naar
+                            <strong>develop</strong>.
+                        </li>
+                        <li>Push de <strong>develop</strong> branch naar github</li>
+                        <li>Ga naar de <strong>master</strong> branch</li>
+                        <li>
+                            <em>Merge</em> de aanpassingen van
+                            <strong>release/{versie}</strong> naar
+                            <strong>master</strong>.
+                        </li>
+                        <li>Push de <strong>master</strong> branch naar github</li>
+                    </ul>
+                </section>
+
             </article>
 
         </main>
