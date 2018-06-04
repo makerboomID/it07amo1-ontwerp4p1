@@ -1,29 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ontwerp 4 - Git-flow</title>
-    <link rel="stylesheet" href="style/index.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ontwerp 4 - Git-flow</title>
+        <link rel="stylesheet" href="style/index.css">
+    </head>
+    <body>
 
-    <header id="header">
-        <h1 id="page-title">Ontwerp 4 - Git-flow</h1>
-    </header>
+        <header id="header">
+            <h1 id="page-title">Ontwerp 4 - Git-flow</h1>
+            <p id="version">1</p>
+        </header>
 
-    <main id="main">
-        <section id="intro">
-            <h1>Ontwerp 4 - Git-flow</h1>
-        </section>
+        <main id="main">
+            <section id="intro">
+                <h1>Ontwerp 4 - Git-flow</h1>
+            </section>
 
 
-        <article>
-        </article>
-    </main>
+            <article id="introductie">
+                <header>
+                    <div class="title">
+                        <h2>Introductie</h2>
+                    </div>
+                    <div class="meta">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </header>
+                <section>
+                    <h3>Doelstelling</h3>
+                    <ul>
+                        <li>
+                            Behendig zijn in:
+                            <em>commits</em>,
+                            <em>branching</em>,
+                            <em>merging</em>,
+                            <em>pushing</em> en
+                            <em>pulling</em>
+                        </li>
+                        <li>Merge conflicten kunnen oplossen</li>
+                        <li>Kunnen werken volgens de gitflow methode</li>
+                    </ul>
+                </section>
 
-    <footer>
+                <section>
+                    <h3>Startinstructies</h3>
+                    <ul>
+                        <li>Fork deze repository naar jouw eigen github account</li>
+                        <li>Clone deze fork naar jouw computer</li>
+                        <li>Open je favoriete git applicatie en editor.</li>
+                    </ul>
+                </section>
+            </article>
 
-    </footer>
+            <article id="afbeeldingen">
+                <header>
+                    <div class="title">
+                        <h2>Afbeeldingen toevoegen</h2>
+                    </div>
+                    <div class="meta">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </header>
+                <section>
+                    <h3>Opdracht</h3>
+                    <p>
+                        Voor je begint met het aanpassen van de code,
+                        zorg dat je in de <strong>develop</strong> branch zit.
+                    </p>
+                    <ul>
+                        <li>Maak een nieuwe branch: <strong>feature/afbeeldingen</strong></li>
+                        <li>Controleer dat je in deze branch zit</li>
+                        <li>
+                            Herhaal de volgende stappen voor iedere hoofdstuk.
+                            <ul>
+                                <li>
+                                    Zoek een passende afbeelding voor het hoofdstuk,
+                                    voeg deze afbeelding toe in de map <em>images</em> en maak een commit.
+                                    <a href="https://www.google.com/search?q=introduction&tbm=isch&&tbs=ic:trans,sur:fmc,itp:clipart">zoeken</a>
+                                </li>
+                                <li>
+                                    Pas de src aan van de placeholder afbeelding van het introductie hoofdstuk aan,
+                                    zodat de nieuw toegevoegde afbeelding zichtbaar is en maak een commit.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Ga terug naar de <strong>develop</strong> branch.</li>
+                        <li><em>Merge</em> de aanpassingen van <strong>feature/afbeeldigen</strong> naar
+                            <strong>develop</strong>.
+                        </li>
+                        <li>Push de <strong>develop</strong> branch naar github</li>
+                    </ul>
+                </section>
+            </article>
 
-</body>
+
+            <article id="conflict">
+                <header>
+                    <div class="title">
+                        <h2>Een conflict oplossen</h2>
+                        <p>
+                            Winnaar:
+                            <span id="winnaar">Onbekend</span>
+                        </p>
+                    </div>
+                    <div class="meta">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </header>
+
+                <section>
+                    <h3>Chuck</h3>
+                    <ul>
+                        <li>Begin een nieuwe feature branch: <strong>feature/chuck</strong></li>
+                        <li>Pas de hierboven aangegeven winnaar aan naar: <em>Chuck Norris</em></li>
+                        <li>Commit deze wijziging.</li>
+                    </ul>
+
+                    <h3>Superman</h3>
+                    <ul>
+                        <li>Ga terug naar de <strong>develop</strong> branch</li>
+                        <li>Begin een nieuwe feature branch: <strong>feature/superman</strong></li>
+                        <li>Pas de hierboven aangegeven winnaar aan naar: <em>Superman</em></li>
+                        <li>Commit deze wijziging.</li>
+                    </ul>
+
+                    <h3>Fight!</h3>
+                    <ul>
+                        <li>Ga terug naar de <strong>develop</strong> branch</li>
+                        <li>
+                            <em>Merge</em> de aanpassingen van <strong>feature/superman</strong> naar
+                            <strong>develop</strong>.
+                        </li>
+                        <li>Controleer of superman de winnaar is.</li>
+                        <li><em>Merge</em> de aanpassingen van <strong>feature/chuck</strong> naar
+                            <strong>develop</strong>.
+                        </li>
+                        <li>
+                            <strong>Conflict!</strong>
+                            <pre><code>
+                                <<<<<<< HEAD
+                                &lt;span id="winnaar"&gt;Superman&lt;/span&gt;
+                                =======
+                                &lt;span id="winnaar"&gt;Chuck&lt;/span&gt;
+                                >>>>>>> feature/chuck
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Zorg dat <em>Chuck</em> de winnaar is.</li>
+                        <li>Commit de merge</li>
+                        <li>Push de <strong>develop</strong> branch naar github</li>
+                    </ul>
+                </section>
+            </article>
+
+            <article>
+                <header>
+                    <div class="title">
+                        <h2>Release</h2>
+                    </div>
+                    <div class="meta">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </header>
+                <section>
+                    <ul>
+                        <li>Ga naar de <strong>master</strong> branch.</li>
+                        <li>
+                            Boven aan de <em>index.html</em>, zie je de laatse <a href="#version">versie</a>,
+                            jouw <em>{versie}</em> is 1 cijfer hoger.
+                        </li>
+                        <li>Start een nieuwe release branch: <strong>release/{versie}</strong></li>
+                        <li>Pas de versie aan in de <em>index.html</em></li>
+                        <li>Commit deze aanpassing</li>
+                        <li>Ga naar de <strong>develop</strong> branch</li>
+                        <li>
+                            <em>Merge</em> de aanpassingen van
+                            <strong>release/{versie}</strong> naar
+                            <strong>develop</strong>.
+                        </li>
+                        <li>Push de <strong>develop</strong> branch naar github</li>
+                        <li>Ga naar de <strong>master</strong> branch</li>
+                        <li>
+                            <em>Merge</em> de aanpassingen van
+                            <strong>release/{versie}</strong> naar
+                            <strong>master</strong>.
+                        </li>
+                        <li>Push de <strong>master</strong> branch naar github</li>
+                    </ul>
+                </section>
+
+            </article>
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </body>
 </html>
