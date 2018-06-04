@@ -231,7 +231,7 @@ body {
 
 #main {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     transition: opacity 0.5s ease;
     margin: 0 auto;
     max-width: 100%;
