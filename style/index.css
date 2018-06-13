@@ -227,6 +227,10 @@ body {
     white-space: nowrap;
 }
 
+#header #version {
+    margin-right: 1.5em;
+}
+
 /*Main*/
 
 #main {
