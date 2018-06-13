@@ -66,9 +66,6 @@ body, input, select, textarea {
 }
 
 a {
-    -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-    -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-    -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
     transition: color 0.2s ease, border-bottom-color 0.2s ease;
     border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
     color: inherit;
@@ -76,9 +73,6 @@ a {
 }
 
 a:before {
-    -moz-transition: color 0.2s ease;
-    -webkit-transition: color 0.2s ease;
-    -ms-transition: color 0.2s ease;
     transition: color 0.2s ease;
 }
 
@@ -189,10 +183,6 @@ hr {
 
 /* Body */
 
-body {
-    -ms-overflow-style: scrollbar;
-}
-
 @media screen and (max-width: 480px) {
 
     html, body {
@@ -237,11 +227,15 @@ body {
     white-space: nowrap;
 }
 
+#header #version {
+    margin-right: 1.5em;
+}
+
 /*Main*/
 
 #main {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     transition: opacity 0.5s ease;
     margin: 0 auto;
     max-width: 100%;
@@ -284,10 +278,171 @@ body.single #main {
 
 /* Article */
 
-#main article {
+article {
     padding: 3em 3em 1em 3em;
     background: #ffffff;
     border: solid 1px rgba(160, 160, 160, 0.3);
     margin: 0 0 3em 0;
     position: relative;
+}
+
+article > header {
+    display: flex;
+    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+    left: -3em;
+    margin: -3em 0 3em 0;
+    position: relative;
+    width: calc(100% + 6em);
+}
+
+article > header > * {
+    padding: 3.75em 3em 3.3em 3em;
+}
+
+article > header > * + * {
+    border-left: solid 1px rgba(160, 160, 160, 0.3);
+}
+
+article > header > .title {
+    flex: 1;
+}
+
+article > header > .meta {
+    min-width: 17em;
+    text-align: right;
+    width: 17em;
+}
+
+article > header > .meta > img {
+    width: 100%;
+}
+
+article > header > .title h2 {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+article > section + section {
+    border-top: solid 1px rgba(160, 160, 160, 0.3);
+    padding-top: 1em;
+}
+
+@media screen and (max-width: 980px) {
+
+    article {
+        border-left: 0;
+        border-right: 0;
+        left: -3em;
+        width: calc(100% + (3em * 2));
+    }
+
+    article > header {
+        flex-direction: column;
+        padding: 3.75em 3em 1.25em 3em;
+        border-left: 0;
+    }
+
+    article > header > * {
+        padding: 0;
+    }
+
+    article > header > .title {
+        margin: 0 0 2em 0;
+        text-align: center;
+    }
+
+    article > header > .meta {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border-left: 0;
+        margin: 0 0 2em 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    article > header > .meta > * {
+        border-left: solid 1px rgba(160, 160, 160, 0.3);
+        margin-left: 2em;
+        padding-left: 2em;
+    }
+
+    article > header > .meta > img {
+        max-height: 10em;
+        height: 100%;
+        width: auto;
+    }
+
+    article > header > .meta > :first-child {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+
+    article {
+        padding: 1.5em 1.5em 0.1em 1.5em;
+        left: -1.5em;
+        margin: 0 0 2em 0;
+        width: calc(100% + (1.5em * 2));
+    }
+
+    article > header {
+        padding: 3em 1.5em 0.5em 1.5em;
+        left: -1.5em;
+        margin: -1.5em 0 1.5em 0;
+        width: calc(100% + 3em);
+    }
+    
+    article > header > .meta > img {
+        max-height: 5em;
+    }
+
+    article > header > .title h2 {
+        font-size: 1.1em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    article > header > .meta {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    article > header > .meta > * {
+        border-left: 0;
+        margin: 1em 0 0 0;
+        padding-left: 0;
+    }
+
+    article > header > .meta > img {
+        display: none;
+
+    }
+    article > footer {
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+
+}
+
+/* Lists */
+
+ul {
+    list-style: disc;
+    margin: 0 0 2em 0;
+    padding-left: 1em;
+}
+
+ul ul {
+    margin: 0;
+}
+
+ul li {
+    padding-left: 0.5em;
 }
